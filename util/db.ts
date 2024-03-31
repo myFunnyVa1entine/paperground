@@ -16,9 +16,9 @@ const client = new MongoClient(uri, {
 export default async function ConnectDB() {
   try {
     await client.connect();
-    const db = client.db(DB_NAME).collection(COLLECTION_NAME);
-
-    return db;
+    const db = client.db(DB_NAME);
+		const collection = db.collection(COLLECTION_NAME);
+		console.log(collection);
   } catch (err) {
     console.error(err);
   }

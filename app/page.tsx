@@ -1,7 +1,9 @@
 import About from './about/page';
 
-export default  function Home() {
-	return <main>
+export default function Home() {
+	return (
+		<main>
 			<About />
-	</main>
+		</main>
+	);
 }
