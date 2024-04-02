@@ -1,5 +1,6 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
-import 'dotenv/config';
+// import 'dotenv/config';
+require('dotenv').config();
 
 const uri = process.env.MONGODB_URI!
 const DB_NAME = "paper_ground";
