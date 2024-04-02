@@ -18,7 +18,8 @@ export default async function ConnectDB() {
     await client.connect();
     const db = client.db(DB_NAME);
 		const collection = db.collection(COLLECTION_NAME);
-		console.log(collection);
+    console.log(collection);
+    return collection;
   } catch (err) {
     console.error(err);
   }
