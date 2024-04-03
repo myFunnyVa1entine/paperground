@@ -20,5 +20,6 @@ export default async function ConnectDB() {
 		return collection;
 	} catch (err) {
 		console.error(err);
+		throw new Error('Failed to connect to database');
 	}
 }
